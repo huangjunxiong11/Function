@@ -29,7 +29,6 @@ class MysqlDb(object):
     def __init__(self):
         pass
 
-    @property
     def connect_db(self):
         """
         连接本地mysql数据库
@@ -43,7 +42,7 @@ class MysqlDb(object):
         print(data)
         db.close()
         pass
-        return db
+        return data
 
     def create_table(self):
         """
