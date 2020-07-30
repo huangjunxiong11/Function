@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # 2.创建Manager对象, 关联app
 # manager = Manager(app)
-from flask_function import blue
+from blue import blue
 
 app.register_blueprint(blue)
 

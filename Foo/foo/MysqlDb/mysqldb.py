@@ -29,6 +29,7 @@ class MysqlDb(object):
     def __init__(self):
         pass
 
+    @property
     def connect_db(self):
         """
         连接本地mysql数据库
@@ -36,13 +37,13 @@ class MysqlDb(object):
         """
         db = MySQLdb.connect(host='192.168.8.105', port=4737, user="fsaduser", password="FSzh201622@$*", db="adsys",
                              charset='utf8')
-        cursor = db.cursor()
-        cursor.execute("SELECT VERSION()")
-        data = cursor.fetchone()
-        print(data)
-        db.close()
+        # cursor = db.cursor()
+        # cursor.execute("SELECT VERSION()")
+        # data = cursor.fetchone()
+        # print(data)
+        # db.close()
         pass
-        return data
+        return db
 
     def create_table(self):
         """
@@ -172,7 +173,6 @@ class MysqlDb(object):
 
         # 关闭连接
         db.close()
-
 
 # mysqldb = MysqlDb()
 # aa = mysqldb.connect_db
